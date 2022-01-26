@@ -31,9 +31,9 @@ router.post('/api/login',cors(),async (req,res)=>{
     if(isPasswordCorrrect){
         jwt.sign({
             email,
-            password,
+    
             isVerified,
-            info,
+            info:info,
             verificationString
         },
         process.env.JWT_SECRET_KEY,{
